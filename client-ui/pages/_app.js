@@ -3,7 +3,6 @@ import React from "react";
 import Layout from "@/layout";
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
 export default function App({ Component, pageProps }) {
   const [mounted, setMounted] = React.useState(false);
@@ -18,7 +17,7 @@ export default function App({ Component, pageProps }) {
       <NextThemesProvider
         attribute="class"
         defaultTheme="dark"
-        themes={["light", "dark", "modern"]}
+        themes={["light", "dark"]}
       >
         <Layout pageProps={pageProps}>
           <Component {...pageProps} />
